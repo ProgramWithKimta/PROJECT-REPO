@@ -9,3 +9,27 @@ body {
     background-color: #6099A6;
     font-weight: 500;
 }
+
+.center-form {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    margin-top: 25px;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* To vertically align the form labels */
+.pure-control-group {
+    display: flex;
+    align-items: center;
+}
+
+/* To align widths of all form input boxes */
+.pure-control-group input, .pure-control-group textarea {
+    width: 300px;
+}
