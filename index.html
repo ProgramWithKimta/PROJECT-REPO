@@ -24,30 +24,40 @@
           <p>Are you a foodie enthusiast, but also extremely disorganized or have bad memory? Welcome! You've come to the right place! There are thousands of recipes in the world and so many ingredients. Let's not forget all the steps required just to make one dish. Here at Foodies Delight, we want to help you cook all your favorite recipes without having to pick at your brain to remember the ingredients or steps to make it. We store all of your favorite recipes and their instructions all in once place.</p>
       </div>
       <div class="instructions">
-          <p>Enter the title, ingredients, and instructions for the recipe in the respective fields, and click Submit. It will be added in the center of the page.</p>
-          <p>To delete a recipe, click the Delete button.</p>
+          <p>Enter the title, ingredients, and instructions for the recipe in the respective fields in the form on the right, and click Submit. It will be added in the center of the page.</p>
+          <p>To delete a recipe, click the Delete button next to the recipe.</p>
       </div>
     </section>
     <section class="pure-u-12-24 recipe">
         <h3>Your Favorite Recipes</h3>
         <!--the scroll bar feature - do in css.-->
     </section>
-    <section class="pure-u-7-24">
-      <form>
-          <label for="ingredients">Ingredients</label>
-          <textarea name="ingredients" id="ingredients" rows="5"></textarea><br>
-          <label for="instruction">Instructions</label>
-          <textarea name="instructions" id="instructions" rows="5"></textarea><br>
-          <button type="submit">Submit</button>
+    <section class="pure-u-7-24 center-form">
+      <form class="pure-form pure-form-aligned">
+          <div class="pure-control-group">
+            <label for="title">Title</label>
+            <input type="text" size="30" name="title" id="title" />
+          </div>
+          <div class="pure-control-group">
+            <label for="ingredients">Ingredients</label>
+            <!-- <input type="text" size="25" name="ingredients" id="ingredients" /> -->
+            <textarea name="ingredients" id="ingredients" rows="5" cols="30"></textarea>
+          </div>
+          <div class="pure-control-group">
+            <label for="instruction">Instructions</label>
+            <!-- <input type="text" size="25" name="instruction" id="instruction" /> -->
+            <textarea name="instructions" id="instructions" rows="5" cols="30"></textarea>
+          </div>
+          <div class="pure-controls">
+            <button class="pure-button pure-button-primary" type="submit">Submit</button>
+          </div>
       </form>
     </section>
   </main>
-
   <footer>
     <!--CURT IS GOING TO WRITE THE FOOTER CODE-->
   </footer>
 
-  <script src="script.js"></script>
-
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
