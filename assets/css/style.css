@@ -2,6 +2,26 @@ body {
     background-color: #A3BF8F;
 }
 
+.header-banner {
+    background: transparent url("https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg") 0 0 no-repeat fixed;
+    text-align: center;
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 3em;
+    display: table;
+}
+
+.header-name {
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-size: 10em;
+    color: white;
+    font-weight: 600;
+    text-shadow: 0 2px 2px black; 
+}
+
 .instructions {
     border: 3px solid black;
     padding: 0 1em;
@@ -32,3 +52,5 @@ label {
 /* To align widths of all form input boxes */
 .pure-control-group input, .pure-control-group textarea {
     width: 300px;
+}
+
