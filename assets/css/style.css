@@ -60,7 +60,6 @@ p {
     padding: 0 1em;
     margin: 1em;
     background-color: #F2F2F2;
-    font-weight: 500;
     max-height: 495px;
 }
 
@@ -84,6 +83,10 @@ p {
 .center-form {
     display: flex;
     justify-content: center;
+    border-right: 3px solid #6099A6;
+    padding: 0 1em;
+    margin: 1em;
+    background-color: #F2F2F2;
 }
 
 form {
@@ -105,3 +108,11 @@ label {
     width: 300px;
 }
 
+footer {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 1.25em;
+    color: #6D8C65;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
