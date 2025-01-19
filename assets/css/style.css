@@ -1,5 +1,21 @@
 body {
-    background-color: #A3BF8F;
+    background-color: whitesmoke;
+}
+
+h3 {
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-size: 1.25em;
+    color: #6D8C65;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    color: #6099A6;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .85em;
 }
 
 .header-banner {
@@ -8,7 +24,7 @@ body {
     background-size: cover;
     height: 200px;
     width: 100%;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     display: table;
 }
 
@@ -17,16 +33,25 @@ body {
     vertical-align: middle;
     margin-bottom: 0;
     font-size: 10em;
-    color: white;
+    color: #eceaea;
     font-weight: 600;
-    text-shadow: 0 2px 2px black; 
+    text-shadow: 0 2px 2px #6D8C65; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.bio {
+    border-right: 3px solid #6099A6;
+    padding: 0 1em;
+    margin: 1em;
+    font-weight: 500;
+    background-color: #F2F2F2;
 }
 
 .instructions {
-    border: 3px solid black;
+    border-right: 3px solid #6099A6;
     padding: 0 1em;
     margin: 1em;
-    background-color: #6099A6;
+    background-color: #F2F2F2;
     font-weight: 500;
 }
 
