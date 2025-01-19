@@ -55,6 +55,32 @@ p {
     font-weight: 500;
 }
 
+.recipe {
+    border-right: 3px solid #6099A6;
+    padding: 0 1em;
+    margin: 1em;
+    background-color: #F2F2F2;
+    font-weight: 500;
+    max-height: 495px;
+}
+
+.allRecipes {
+    max-height: 470px;
+    overflow-y: scroll; 
+}
+
+.recipeAdd {
+    border-bottom: 3px dotted #6099A6;
+    background-color: transparent;
+    font-weight: 500;
+}
+
+.recipeName {
+    color: #6099A6;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
 .center-form {
     display: flex;
     justify-content: center;
