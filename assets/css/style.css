@@ -39,8 +39,13 @@ p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.bio {
+.pure-u-5-24 {
     border-right: 3px solid #6099A6;
+    max-height: 510px;
+    overflow-y: scroll;
+}
+
+.bio {
     padding: 0 1em;
     margin: 1em;
     font-weight: 500;
@@ -48,7 +53,6 @@ p {
 }
 
 .instructions {
-    border-right: 3px solid #6099A6;
     padding: 0 1em;
     margin: 1em;
     background-color: #F2F2F2;
@@ -83,7 +87,6 @@ p {
 .center-form {
     display: flex;
     justify-content: center;
-    border-right: 3px solid #6099A6;
     padding: 0 1em;
     margin: 1em;
     background-color: #F2F2F2;
