@@ -18,7 +18,7 @@ function storeLocalStorage(recipe) {
 }
 
 function submitForm(event) {
-    event.preventDefault();
+    // event.preventDefault();
     formError.textContent = "";
     if(formTitle.value == '' || formIngredients.value == '' || formInstructions.value == '') {
         error.textContent = 'Please complete the form.';
@@ -34,4 +34,4 @@ function submitForm(event) {
     storeLocalStorage(recipe);
 }
 
-form.addEventListener('click', submitForm)
+form.addEventListener('submit', submitForm)
