@@ -41,7 +41,12 @@
       <h3>Your Favorite Recipes</h3>
       <div class="allRecipes">
         <div class="recipeAdd">
-          <button class="button-xsmall pure-button delete">Delete</button>
+          <button class="button-xsmall pure-button deleteBtn">Delete</button>
+          <dialog class="deleteModal">
+            <div>Are you sure you want to delete this recipe?</div>
+            <br>
+            <button class="button-xsmall pure-button xBtn"><span class="close">&times;</span></button>
+          </dialog>
           <h5 class="recipeName">Testing</h5>
           <p class="recipeFoods">food, food, food, food, food, food</p>
           <p class="recipeHowTo">testing testing testing </p>
@@ -91,7 +96,6 @@
         <textarea name="instructions" id="instructions" rows="5" cols="30"></textarea>
         <button class="pure-button pure-button-primary submit" type="submit">Submit</button>
         <p id="error"></p>
-        <button class="pure-button pure-button-primary" type="submit">Submit</button>
       </form>
     </section>
   </main>

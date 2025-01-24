@@ -35,3 +35,17 @@ function submitForm(event) {
 }
 
 form.addEventListener('submit', submitForm)
+
+// Modal to appear when delete button is selected
+const deleteModalBtn = document.querySelector('.deleteBtn');
+const modalDelete = document.querySelector('.deleteModal');
+const closeXModal = document.querySelector('.xBtn')
+
+deleteModalBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    modalDelete.showModal();
+});
+
+closeXModal.addEventListener('click', () => {
+    modalDelete.close();
+});

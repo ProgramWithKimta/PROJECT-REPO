@@ -70,12 +70,30 @@ p {
     font-weight: 500;
 }
 
-.delete {
+.deleteBtn {
     color: white;
     background: #6D8C65;
     border-radius: 4px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     font-size: 70%;
+}
+
+.deleteModal {
+    color: #6D8C65;
+    background: white;
+    font-weight: bold;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 70%; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.xBtn {
+    color: #6D8C65;
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 50%;
 }
 
 .recipeName {
