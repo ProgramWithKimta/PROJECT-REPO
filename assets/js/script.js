@@ -42,6 +42,8 @@ function submitConfirmed() {
     formModal.close();
 }
 
+form.addEventListener('submit', submitForm)
+
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     formError.textContent = "";
@@ -57,4 +59,18 @@ formModalYes.addEventListener('click', submitConfirmed);
 
 formModalNo.addEventListener('click', () => {
     formModal.close();
+});
+
+// Modal to appear when delete button is selected
+const deleteModalBtn = document.querySelector('.deleteBtn');
+const modalDelete = document.querySelector('.deleteModal');
+const closeXModal = document.querySelector('.xBtn')
+
+deleteModalBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    modalDelete.showModal();
+});
+
+closeXModal.addEventListener('click', () => {
+    modalDelete.close();
 });
