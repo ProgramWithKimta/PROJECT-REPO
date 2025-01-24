@@ -116,7 +116,7 @@ p {
     font-size: 90%;
 }
 
-.modalButtons {
+.formModalButtons {
     display: flex;
     justify-content: space-evenly;
 }
