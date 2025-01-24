@@ -4,6 +4,9 @@ const formIngredients = document.querySelector('#ingredients');
 const formInstructions = document.querySelector('#instructions');
 const formError = document.querySelector('#error');
 const formSubmit = document.querySelector('#submit');
+const formModal = document.querySelector('#formModal');
+const formModalYes = document.querySelector('#formModalYes');
+const formModalNo = document.querySelector('#formModalNo');
 
 function readLocalStorage() {
     recipes = JSON.parse(localStorage.getItem('recipes'));
@@ -18,13 +21,17 @@ function storeLocalStorage(recipe) {
 }
 
 function submitForm(event) {
-    // event.preventDefault();
+    event.preventDefault();
     formError.textContent = "";
     if(formTitle.value == '' || formIngredients.value == '' || formInstructions.value == '') {
         error.textContent = 'Please complete the form.';
         return;
     }
 
+    formModal.showModal();
+}
+
+function submitConfirmed() {
     const recipe = {
         title: formTitle.value,
         ingredients: formIngredients.value,
@@ -32,6 +39,22 @@ function submitForm(event) {
     }
 
     storeLocalStorage(recipe);
+    formModal.close();
 }
 
-form.addEventListener('submit', submitForm)
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    formError.textContent = "";
+    if(formTitle.value == '' || formIngredients.value == '' || formInstructions.value == '') {
+        error.textContent = 'Please complete the form.';
+        return;
+    }
+
+    formModal.showModal();
+});
+
+formModalYes.addEventListener('click', submitConfirmed);
+
+formModalNo.addEventListener('click', () => {
+    formModal.close();
+});
