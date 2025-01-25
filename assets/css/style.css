@@ -136,3 +136,33 @@ footer {
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+@media only screen and (max-width: 1393px) {
+    .header-name {
+        font-size: 8em;
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    .header-name {
+        font-size: 5em;
+    }
+
+    section {
+        padding: 1em;
+    }
+
+    .recipe {
+        padding: 1em;
+        max-height: unset;
+        border-right: unset;
+    }
+
+    section:not(:last-child) {
+        border-bottom: 3px solid black;
+    }
+
+    footer h4 {
+        margin: 0;
+    }
+}
