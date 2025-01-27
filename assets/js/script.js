@@ -11,10 +11,10 @@ const formModalX = document.querySelector('#formModalX');
 
 function readLocalStorage() {
     recipes = JSON.parse(localStorage.getItem('recipes'));
-    if(recipes) { return recipes; }
+    if (recipes) { return recipes; }
     else { return []; }
 };
-  
+
 function storeLocalStorage(recipe) {
     const recipes = readLocalStorage();
     recipes.push(recipe);
@@ -24,7 +24,7 @@ function storeLocalStorage(recipe) {
 function submitForm(event) {
     event.preventDefault();
     formError.textContent = "";
-    if(formTitle.value == '' || formIngredients.value == '' || formInstructions.value == '') {
+    if (formTitle.value == '' || formIngredients.value == '' || formInstructions.value == '') {
         error.textContent = 'Please complete the form.';
         return;
     }
@@ -77,7 +77,9 @@ formModal.addEventListener('click', clickOutsideModalClose);
 // Modal to appear when delete button is selected
 const deleteModalBtn = document.querySelector('.deleteBtn');
 const modalDelete = document.querySelector('.deleteModal');
-const closeXModal = document.querySelector('.xBtn')
+const closeXModal = document.querySelector('.xBtn');
+const noDeleteModal = document.querySelector('#deleteModalNo');
+const yesDeleteModal = document.querySelector('#deleteModalYes');
 
 deleteModalBtn.addEventListener('click', (event) => {
     event.preventDefault();
@@ -87,3 +89,37 @@ deleteModalBtn.addEventListener('click', (event) => {
 closeXModal.addEventListener('click', () => {
     modalDelete.close();
 });
+
+noDeleteModal.addEventListener('click', () => {
+    modalDelete.close();
+});
+
+yesDeleteModal.addEventListener('click', () => {
+    modalDelete.close();
+    addRecipe.remove();
+});
+
+// to append the data from local storage to DOM
+function addRecipeToDom() {
+    const storedRecipe = localStorage.getItem('submittedRecipe');
+
+    if (storedRecipe) {
+        JSON.parse(storedRecipe);
+        const addRecipe = document.querySelector('.recipeAdd');
+
+        h5 = document.createElement('h5');
+        h5.textContent = recipe.title;
+
+        p = document.createElement('p');
+        p.textContent = recipe.ingredients;
+
+        p = document.createElement('p');
+        p.textContent = recipe.instructions;
+
+        div = document.createElement('div');
+        div.appendChild(h5);
+        div.appendChild(p);
+        div.appendChild(p);
+        addRecipe.appendChild(div);
+    };
+};
