@@ -13,7 +13,11 @@ https://programwithkimta.github.io/PROJECT-REPO/
 
 Enter the title, ingredients, and instructions for the recipe in the respective fields in the form on the right, and click Submit. It will be added in the center of the page.
 
+![image](https://github.com/user-attachments/assets/478875e7-3cb8-4898-b688-080a95781917)
+
 To delete all recipes, click the Delete button underneath 'Your Favorite Recipe' header.
+
+![image](https://github.com/user-attachments/assets/c0195dfa-3ae8-4532-9c26-88e8154f95fe)
 
 Recipes will be stored locally and be persistent on the application page.
 
