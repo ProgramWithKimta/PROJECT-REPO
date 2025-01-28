@@ -43,10 +43,10 @@ p {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.pure-u-5-24 {
+.pure-u-xl-5-24 {
     border-right: 3px solid #6099A6;
     max-height: 510px;
-    overflow-y: scroll;
+    overflow-y: auto;
     background-color: #F2F2F2;
     font-weight: 500;
     padding: 0px 16px;
@@ -61,7 +61,7 @@ p {
 
 .allRecipes {
     max-height: 470px;
-    overflow-y: scroll; 
+    overflow-y: auto; 
 }
 
 .recipeAdd {
