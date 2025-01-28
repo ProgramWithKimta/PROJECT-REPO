@@ -1,34 +1,168 @@
 body {
-    background-color: #A3BF8F;
+    background-color: whitesmoke;
 }
 
-.instructions {
-    border: 3px solid black;
-    padding: 0 1em;
-    margin: 1em;
-    background-color: #6099A6;
+h3 {
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-size: 1.25em;
+    color: #6D8C65;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p {
+    color: #6099A6;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: .85em;
+}
+
+.pure-g > section {
+    box-sizing: border-box;
+}
+
+.header-banner {
+    background: transparent url("https://images.pexels.com/photos/616401/pexels-photo-616401.jpeg") 0 0 no-repeat fixed;
+    text-align: center;
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 1em;
+    display: table;
+}
+
+.header-name {
+    display: table-cell;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-size: 10em;
+    color: #eceaea;
+    font-weight: 600;
+    text-shadow: 0 2px 2px #6D8C65; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.pure-u-xl-5-24 {
+    border-right: 3px solid #6099A6;
+    max-height: 510px;
+    overflow-y: auto;
+    background-color: #F2F2F2;
     font-weight: 500;
+    padding: 0px 16px;
+}
+
+.recipe {
+    border-right: 3px solid #6099A6;
+    padding: 0 1em;
+    background-color: #F2F2F2;
+    max-height: 510px;
+}
+
+.allRecipes {
+    max-height: 470px;
+    overflow-y: auto; 
+}
+
+.recipeAdd {
+    border-bottom: 3px dotted #6099A6;
+    background-color: transparent;
+    font-weight: 500;
+}
+
+.deleteBtn {
+    color: white;
+    background: #6D8C65;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 70%;
+}
+
+.deleteModal {
+    color: #6D8C65;
+    background: white;
+    font-weight: bold;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 70%; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.xBtn {
+    color: #6D8C65;
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 50%;
+}
+
+.recipeName {
+    color: #6099A6;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
 }
 
 .center-form {
     display: flex;
     justify-content: center;
+    background-color: #F2F2F2;
 }
 
-form {
-    margin-top: 25px;
+.submit {
+    color: white;
+    background: #6099A6;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 90%;
+}
+
+.formModalButtons {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 label {
     font-weight: bold;
+    color: #6099A6;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* To vertically align the form labels */
-.pure-control-group {
-    display: flex;
-    align-items: center;
+footer {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 1.25em;
+    color: #6D8C65;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* To align widths of all form input boxes */
-.pure-control-group input, .pure-control-group textarea {
-    width: 300px;
+@media only screen and (max-width: 1393px) {
+    .header-name {
+        font-size: 8em;
+    }
+}
+
+@media only screen and (max-width: 1279px) {
+    .header-name {
+        font-size: 5em;
+    }
+
+    section {
+        padding: 1em;
+    }
+
+    .recipe {
+        padding: 1em;
+        max-height: unset;
+        border-right: unset;
+    }
+
+    section:not(:last-child) {
+        border-bottom: 3px solid black;
+    }
+
+    footer h4 {
+        margin: 0;
+    }
+}

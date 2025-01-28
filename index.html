@@ -5,60 +5,89 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Foodies Delight</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/base-min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+    integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
   <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
 
 <body>
-  <header>
-    <h1>Foodies Delight</h1>
-    </header>  
-  
+  <header class="header-banner">
+    <h1 class="header-name">Foodies Delight</h1>
+  </header>
+
   <main class="pure-g">
-    <!--Note: would the bio and instructions be its own parent div that are stacked or be two child divs inside a parent div that is stacked?-->
-    <section class="pure-u-5-24"> 
+    <section class="pure-u-xl-5-24 pure-u-1">
       <div class="bio">
-          <h3>Our Mission Statement</h3>
-          <p>Are you a foodie enthusiast, but also extremely disorganized or have bad memory? Welcome! You've come to the right place! There are thousands of recipes in the world and so many ingredients. Let's not forget all the steps required just to make one dish. Here at Foodies Delight, we want to help you cook all your favorite recipes without having to pick at your brain to remember the ingredients or steps to make it. We store all of your favorite recipes and their instructions all in once place.</p>
+        <h3>Our Mission Statement</h3>
+        <p>Are you a foodie enthusiast, but also extremely disorganized or have bad memory?<br><br>
+          <b>Welcome! You've come to the right place!</b><br><br>
+          There are thousands of recipes in the world and so many ingredients. Let's not forget all the
+          steps required just to make one dish.<br><br>
+          Here at Foodies Delight, we want to help you cook all your favorite
+          recipes without having to pick at your brain to remember the ingredients or steps to make it. We store all of
+          your favorite recipes and their instructions all in once place!
+        </p>
       </div>
       <div class="instructions">
-          <p>Enter the title, ingredients, and instructions for the recipe in the respective fields in the form on the right, and click Submit. It will be added in the center of the page.</p>
-          <p>To delete a recipe, click the Delete button next to the recipe.</p>
+        <h3>Form Instructions</h3>
+        <p>Enter the title, ingredients, and instructions for the recipe in the respective fields in the form on the
+          right, and click Submit. It will be added in the center of the page.</p>
+        <p>To delete a recipe, click the Delete button next to the recipe.</p>
       </div>
     </section>
-    <section class="pure-u-12-24 recipe">
-        <h3>Your Favorite Recipes</h3>
-        <!--the scroll bar feature - do in css.-->
+
+    <section class="pure-u-xl-1-2 pure-u-1 recipe">
+      <h3>Your Favorite Recipes</h3>
+      <div class="allRecipes">
+        <button class="button-xsmall pure-button deleteBtn">Delete All Recipes</button>
+        <dialog class="deleteModal">
+          <div>Are you sure you want to delete this recipe?</div>
+          <div style="text-align: right;">
+            <button class="button-xsmall pure-button xBtn"><span class="close">&times;</span></button>
+          </div>
+          <br>
+          <div class="deleteModalOptions">
+            <button id="deleteModalYes" class="pure-button pure-button-primary submit">Yes</button>
+            <button id="deleteModalNo" class="pure-button pure-button-primary submit">No</button>
+          </div>
+
+        </dialog>
+      </div>
     </section>
-    <section class="pure-u-7-24 center-form">
-      <form class="pure-form pure-form-aligned">
-          <div class="pure-control-group">
-            <label for="title">Title</label>
-            <input type="text" size="30" name="title" id="title" />
-          </div>
-          <div class="pure-control-group">
-            <label for="ingredients">Ingredients</label>
-            <!-- <input type="text" size="25" name="ingredients" id="ingredients" /> -->
-            <textarea name="ingredients" id="ingredients" rows="5" cols="30"></textarea>
-          </div>
-          <div class="pure-control-group">
-            <label for="instruction">Instructions</label>
-            <!-- <input type="text" size="25" name="instruction" id="instruction" /> -->
-            <textarea name="instructions" id="instructions" rows="5" cols="30"></textarea>
-          </div>
-          <div class="pure-controls">
-            <button class="pure-button pure-button-primary" type="submit">Submit</button>
-          </div>
+
+    <section class="pure-u-xl-7-24 pure-u-1 center-form">
+      <form class="pure-form pure-form-stacked">
+        <h3>Enter Your Favorite Dishes Here</h3>
+        <br>
+        <label for="title">Recipe Name</label>
+        <input class="pure-input-1" type="text" name="title" id="title" />
+        <label for="ingredients">Ingredients</label>
+        <textarea class="pure-input-1" name="ingredients" id="ingredients" rows="5"></textarea>
+        <label for="instruction">Instructions</label>
+        <textarea class="pure-input-1" name="instructions" id="instructions" rows="5"></textarea>
+        <button class="pure-button pure-button-primary submit" type="submit">Submit</button>
+        <p id="error"></p>
       </form>
+      
+      <dialog id="formModal">
+        <div style="text-align: right;">
+          <button class="button-xsmall pure-button xBtn" id="formModalX"><span class="close">&times;</span></button>
+        </div>
+        <div>Are you sure you want to submit this recipe?</div><br>
+        <div class="formModalButtons">
+          <button id="formModalYes" class="pure-button pure-button-primary submit">Yes</button>
+          <button id="formModalNo" class="pure-button pure-button-primary submit">No</button>
+        </div>
+      </dialog>
     </section>
   </main>
+
   <footer>
-    <h4>Thanks For Stopping By!</h4>
-    <br>
-    <h4>Kimta & Grant</h4>
+    <h4>Thank You For Stopping By! -- Kimta & Grant</h4>
   </footer>
 
   <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
