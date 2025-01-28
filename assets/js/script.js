@@ -45,6 +45,28 @@ function submitConfirmed() {
     formIngredients.value = '';
     formInstructions.value = '';
 
+    const h5 = document.createElement('h5');
+    h5.classList.add("recipeName");
+    h5.textContent = recipe.title;
+
+    const pIngredients = document.createElement('p');
+    pIngredients.classList.add("ingredients");
+    pIngredients.textContent = recipe.ingredients;
+
+    const pCookingInstructions = document.createElement('p');
+    pCookingInstructions.classList.add("cooking-instructions");
+    pCookingInstructions.textContent = recipe.instructions;
+
+    const divaddrecipe = document.createElement('div');
+    divaddrecipe.classList.add("recipeAdd");
+    divaddrecipe.appendChild(h5);
+    divaddrecipe.appendChild(pIngredients);
+    divaddrecipe.appendChild(pCookingInstructions);
+    // divaddrecipe.appendChild(deletebtn);
+
+    const allRecipes = document.querySelector('.allRecipes');
+    allRecipes.appendChild(divaddrecipe);
+
     formModal.close();
 };
 
@@ -96,30 +118,62 @@ noDeleteModal.addEventListener('click', () => {
 
 yesDeleteModal.addEventListener('click', () => {
     modalDelete.close();
-    addRecipe.remove();
+    const divs = document.querySelectorAll('div.recipeAdd');
+    for (let i = 0; i < divs.length; i++) {
+        divs[i].remove();
+    }
+
+    localStorage.clear();
 });
 
-// to append the data from local storage to DOM
-function addRecipeToDom() {
-    const storedRecipe = localStorage.getItem('submittedRecipe');
+// // to append the data from local storage to DOM
+// function addRecipeToDom() {
+//     const storedRecipe = localStorage.getItem('submittedRecipe');
 
-    if (storedRecipe) {
-        JSON.parse(storedRecipe);
-        const addRecipe = document.querySelector('.recipeAdd');
+//     if (storedRecipe) {
+//         JSON.parse(storedRecipe);
+//         const addRecipe = document.querySelector('.recipeAdd');
 
-        h5 = document.createElement('h5');
-        h5.textContent = recipe.title;
+//         h5 = document.createElement('h5');
+//         h5.textContent = recipe.title;
 
-        p = document.createElement('p');
-        p.textContent = recipe.ingredients;
+//         p = document.createElement('p');
+//         p.textContent = recipe.ingredients;
 
-        p = document.createElement('p');
-        p.textContent = recipe.instructions;
+//         p = document.createElement('p');
+//         p.textContent = recipe.instructions;
 
-        div = document.createElement('div');
-        div.appendChild(h5);
-        div.appendChild(p);
-        div.appendChild(p);
-        addRecipe.appendChild(div);
-    };
+//         div = document.createElement('div');
+//         div.appendChild(h5);
+//         div.appendChild(p);
+//         div.appendChild(p);
+//         addRecipe.appendChild(div);
+//     };
+// };
+
+window.onload = function () {
+    const storedrecipes = readLocalStorage();
+    const allRecipes = document.querySelector('.allRecipes');
+
+    for (recipe in storedrecipes) {
+        const h5 = document.createElement('h5');
+        h5.classList.add("recipeName");
+        h5.textContent = storedrecipes[recipe].title;
+
+        const pIngredients = document.createElement('p');
+        pIngredients.classList.add("ingredients");
+        pIngredients.textContent = storedrecipes[recipe].ingredients;
+
+        const pCookingInstructions = document.createElement('p');
+        pCookingInstructions.classList.add("cooking-instructions");
+        pCookingInstructions.textContent = storedrecipes[recipe].instructions;
+
+        const divaddrecipe = document.createElement('div');
+        divaddrecipe.classList.add("recipeAdd");
+        divaddrecipe.appendChild(h5);
+        divaddrecipe.appendChild(pIngredients);
+        divaddrecipe.appendChild(pCookingInstructions);
+
+        allRecipes.appendChild(divaddrecipe);
+    }
 };
