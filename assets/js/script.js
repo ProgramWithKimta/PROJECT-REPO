@@ -48,14 +48,17 @@ function submitConfirmed() {
     const h5 = document.createElement('h5');
     h5.classList.add("recipeName");
     h5.textContent = recipe.title;
+    h5.style.whiteSpace = "pre";
 
     const pIngredients = document.createElement('p');
     pIngredients.classList.add("ingredients");
     pIngredients.textContent = recipe.ingredients;
+    pIngredients.style.whiteSpace = "pre";
 
     const pCookingInstructions = document.createElement('p');
     pCookingInstructions.classList.add("cooking-instructions");
     pCookingInstructions.textContent = recipe.instructions;
+    pCookingInstructions.style.whiteSpace = "pre";
 
     const divaddrecipe = document.createElement('div');
     divaddrecipe.classList.add("recipeAdd");
@@ -159,14 +162,17 @@ window.onload = function () {
         const h5 = document.createElement('h5');
         h5.classList.add("recipeName");
         h5.textContent = storedrecipes[recipe].title;
+        h5.style.whiteSpace = "pre";
 
         const pIngredients = document.createElement('p');
         pIngredients.classList.add("ingredients");
         pIngredients.textContent = storedrecipes[recipe].ingredients;
+        pIngredients.style.whiteSpace = "pre";
 
         const pCookingInstructions = document.createElement('p');
         pCookingInstructions.classList.add("cooking-instructions");
         pCookingInstructions.textContent = storedrecipes[recipe].instructions;
+        pCookingInstructions.style.whiteSpace = "pre";
 
         const divaddrecipe = document.createElement('div');
         divaddrecipe.classList.add("recipeAdd");
